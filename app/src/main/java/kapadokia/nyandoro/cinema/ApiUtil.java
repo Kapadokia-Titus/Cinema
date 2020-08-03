@@ -143,6 +143,6 @@ public class ApiUtil {
 
         }
 
-        return movies; 
+        return movies;
     }
 }
