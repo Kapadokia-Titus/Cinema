@@ -7,7 +7,11 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
+
+import kapadokia.nyandoro.cinema.model.Movie;
 
 public class ApiUtil {
 
@@ -67,5 +71,23 @@ public class ApiUtil {
             connection.disconnect();
         }
 
+    }
+
+    // fetching movies from the json
+    public static ArrayList<Movie> getMoviesFromJson(String json){
+        final double popularity;
+        final int vote_count;
+        final boolean video;
+        final String poster_path;
+        final int id; // 592350,
+        final boolean adult;
+        final String backdrop_path;
+        final String original_language;
+        final String original_title;
+        final int genre_ids;
+        final String title;
+        final double vote_average;
+        final String overview;
+        final String release_date;
     }
 }
