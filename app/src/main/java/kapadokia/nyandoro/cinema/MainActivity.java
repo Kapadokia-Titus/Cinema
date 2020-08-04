@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 
@@ -21,6 +22,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         textView = findViewById(R.id.text);
+        try {
+            URL movieUrl =ApiUtil.buildUrl("top_rated");
+            new MovieBackgroundTask().execute(movieUrl);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
     }
 
 

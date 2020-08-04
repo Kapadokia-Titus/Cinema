@@ -25,7 +25,7 @@ public class ApiUtil {
 
 
     //
-    public static URL buildUrl(){
+    public static URL buildUrl(String title){
 
         URL url = null;
         Uri uri = Uri.parse(BASE_API_URL).buildUpon()
